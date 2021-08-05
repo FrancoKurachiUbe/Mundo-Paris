@@ -1,0 +1,542 @@
+/*
+-----MOBILE:  320px a  480px.
+---------PC: 1280px a 1366px.
+*/
+* {		    
+    margin:0 ;
+    padding:0 ;
+    box-sizing: border-box;
+}
+.borde {
+    border: 1px black solid;
+}
+ul {
+    list-style: none;
+}
+p {     
+    font-family:"Georgia" ;  
+}
+a {
+    text-decoration:none;
+}
+
+/* ----------------HEADER---------------------- */
+
+h1 {	    
+    font-size:2.5em ;
+    color:red ;
+}
+h1 span {
+    color:blue ;
+}
+    
+img, iframe {
+    max-width:100%;
+}
+figure, h1, h2 {
+    text-align: center;
+}
+/* -----------------------Informacion + Resto------------------------ */
+h2 {
+    font-family:"Georgia" ;
+    font-size: 1.7em;
+    color:white;
+    background-color: blue; 
+    margin-bottom: 1em;
+    padding: .1em;
+}
+.cont-Exc, .cont-Resto, .cont-free, .cont-Lugares {
+    background: #CDCDCD;
+    border-radius: 20px;
+    margin-bottom: 2em;
+}
+/* .cont-Lugares h3 {
+    margin-bottom: .3em;
+} */
+.detalle-free {
+    padding:1em
+}
+h3 {        
+    font-size: 1.8em;
+    font-family: "Georgia";
+    text-align: center;
+}
+.boton{
+    background-color: black ;
+    display: block;
+    width: 80%;
+    padding:.2em 0 ;
+    margin:auto;
+    border-radius: 15px;
+    font-family:"Arial" ;
+    text-align: center;
+    font-size:1.5em ;
+    color:white ;
+}
+/*------------------Formulario---------------------*/
+form {   padding: 1em;
+    max-width:480px ;
+    border: solid 1px grey;
+    border-radius: 15px;
+    margin: auto;
+}
+label {  padding-left: .5em;
+    display: block;
+    height: 1.5em;
+}
+input, select, textarea { 
+    height: 3em;
+    margin-bottom: 1.5em;
+    display: block;
+    width: 100%;
+    border: solid 1px grey;
+    border-radius: 5px;
+}
+.file-label{
+    border: 1px solid black;
+    height: 4em;
+    margin-bottom: -2.5em;
+    border: solid 1px grey;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input[type="file"] {
+    opacity: 0;
+}
+
+.Enviar {       
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #0000FF ;
+    color: white;
+    width: 70%;
+    margin: auto;
+}
+
+/*------------------Gracias.HTML-------------------*/
+.gracias-A, .gracias-B, .gracias-C {
+        max-width: 500px;
+        height: 150px;
+        margin: auto;
+        border-left: black 1px solid;
+        border-right:  black 1px solid;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+}
+.gracias-A { background-color:blue ;
+        border-top : black 1px solid;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        font-size: 2em;
+}
+.gracias-C {    background-color:red ;
+        border-bottom : black 1px solid;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+}
+.gracias-B p {   text-align: center;
+        font-size: 2em;
+}
+.gracias-C a {  color: white;
+        font-size: 2.5em;
+        border: 2px white solid;
+        padding: .1em;
+        border-radius: 15px;
+}
+/*-------------------Footer------------------------------------------*/
+footer {
+    background-color: #999999;
+    padding-top: 1.5em;
+    padding-bottom: 1em;           
+}
+footer ul li {
+    margin-left: .2em;
+}
+footer ul {
+    margin-top: 1em;
+}
+footer p{
+    margin-top: .5em;
+    color: white;
+    text-align: center;
+}
+.redes {
+    width: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: right;
+}
+.logos ul li {
+    display: inline-block;
+}
+.contacto {
+    text-align: left;
+    color: white;
+}
+.cont-mapa {
+    display: inline-block;
+    width: 47%;
+    vertical-align: middle;
+}
+#mapa { border-radius: 50%;
+}   
+
+@media screen and (max-width: 779px){
+
+    /*----------MenuDeNavegacion-----------*/
+    nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    #hamburguesa li {
+        list-style: none;
+        text-indent: -100px;
+        overflow: hidden;
+        margin-top: .25em;
+        margin-left: .25em;
+        width: 2.5em;
+    }
+    #hamburguesa li a {  background:url("../Imagenes/icon/menu.png") 
+    no-repeat center center;
+        background-size:cover;
+        display: block;
+        height: 2.5em;
+    }
+
+    #hamburguesa li:last-child {
+    display: none;
+    }
+    nav:target #barra {
+        left: 0;
+    }
+    nav:target #hamburguesa li:first-child {
+        display: none;
+    }
+
+    nav:target #hamburguesa li:last-child {
+        display: block;
+    }
+    #barra {
+        width: 50%;
+        height: calc(100vh - 3em);
+        position: absolute;
+        top: 3em;
+        left: -70%;
+        background: white;
+        transition: left .5s ease;
+    }
+    #barra li {
+        list-style: none;
+        margin: 1em;
+        margin-left: 2em;
+        width: 80%;
+        border-bottom: 1px solid red;
+        display: inline-block;
+    }
+
+    #barra li a {
+        text-decoration: none;
+        font-size: 1.3em;
+        display: block;
+        color:#0233cb;
+        line-height: 2em;
+    }
+    /*---------------------Informacion-----------------------*/
+    h2 {
+        margin-bottom: 1em;
+    }
+    section {
+        padding: .5em;
+    }
+    h2 {   
+        margin-left: -.5em;
+        margin-right: -.5em;
+        font-size: 1.7em;
+    }
+    .cont-Exc, .cont-Resto, .cont-Lugares, .cont-free {
+        margin-left:0.5em;
+        padding-bottom:1em;
+        max-width: 480px;
+        margin: auto;
+        margin-bottom: 2em;
+    }
+    .cont-Exc img, .cont-Resto img, .cont-Lugares img, .cont-free {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+    .detalle-Exc, .detalle-Resto, .detalle-Lugares {
+        padding:.5em 1em 1em 1em;
+    }
+    .detalle-Lugares h3, .detalle-Exc h3, .detalle-Exc p, .detalle-Resto h3, .detalle-Resto p {
+        margin-bottom: .5em;
+    }
+    .boton {
+        margin-top: .5em;
+    }
+    /*---------------------Footer----------------------------*/
+    footer ul li {
+        margin-left: .2em;
+        color: white;
+    }
+    .logos {
+        max-width: 160px;
+        margin: auto;
+    } 
+    .cont-mapa {
+        text-align: center;
+    }
+    #face, #twitter, #youtube, #insta {
+        padding-right: 32px;
+        padding-bottom: 16px;
+        text-decoration: none;
+    }
+    #face {
+        background-image: url("../Imagenes/icon/face.png");
+    }
+    #twitter {
+        background-image: url("../Imagenes/icon/twitter.png");
+    }
+    #youtube {
+        background-image: url("../Imagenes/icon/youtube.png");
+    }
+    #insta {
+        background-image: url("../imagenes/icon/instagram.png");
+    }
+}
+@media screen and (min-width:780px) {
+
+    h2 {
+        font-size: 2em;
+    }
+    .home {
+        padding:0 2em ;
+    }
+
+    section {
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+    /*------------------------Header------------------------------------------*/
+    h1 {
+        padding-left:.5em;
+        font-size: 4em;
+        text-align: left;
+        margin-bottom: -.4em;
+    }
+    #hamburguesa {
+        display: none;
+    }
+    #barra li {
+        display: inline-block;
+        margin-right: 1em;
+    }
+    li a {
+        color: black;
+    }
+    nav {
+        float: right;
+        margin-right: 2em;
+    }
+    /*------------------------Lugares------------------------------------------*/
+
+    .cont-Exc, .cont-Resto, .cont-Lugares { 
+        margin: auto;
+        margin-bottom: 1em;
+
+    }
+    .cont-Lugares{
+        max-width: 500px;
+    }
+    .cont-Lugares img{
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+    .detalle-Lugares {
+        padding: 1em;
+    }
+    .detalle-Lugares h3{
+        margin-bottom: .5em;
+    }
+    /*------------------------Informacion------------------------------------------*/
+    .cont-Exc {
+        max-width:780px;
+        height: 240px;
+    }
+    .cont-Exc img{
+        display: inline-block;
+        border-bottom-left-radius: 20px;
+        border-top-left-radius: 20px;
+    }
+    .detalle-Exc, .detalle-Resto {  padding: .5em .5em .5em 1em;
+        margin-right: 1em;
+        vertical-align: top;
+    }
+    .detalle-Exc {
+        max-width: 400px;
+        height: 240px;
+        float: right;
+    }
+    .detalle-Exc p {
+        margin-bottom: .2em;
+        height: 70%;
+    }
+    .detalle-Exc h3{
+        margin-bottom: .2em;
+        font-size: 1.4em;
+    }
+    
+    .cont-free img, .cont-Resto img {
+        border-top-left-radius: 20px ;
+        border-top-right-radius:20px ;
+    }
+    .cont-free {
+        display: inline-block;
+        vertical-align: top;
+        width: 300px;
+        margin: .5em;
+    }
+    .centrar {
+        margin: auto;
+        max-width:960px ;
+    }
+    .detalle-free h3, .detalle-free p {
+        margin-bottom: .5em;
+    }   
+    .boton {
+        font-size: 1.2em;
+        bottom: 0;
+    }
+    /*-----------------------Resto-------------------------*/
+    .cont-Resto{
+        width: 600px;
+        padding-bottom: .5em;
+    }
+    .detalle-Resto h3 {
+        margin-bottom: .5em;
+        margin-top: .5em;
+    }
+    .detalle-Resto ul li {
+        margin-top: .5em;
+        margin-left: 1em;
+    }
+    .detalle-Resto ul li span {
+        font-size: 1.1em;
+        font-weight: bold;
+    }
+    /*------------------------Gracias.html-----------------*/
+    .gracias-A, .gracias-B, .gracias-C {
+        max-width: 700px;
+        height: 200px;
+    }
+    .gracias-A {
+        font-size: 3em;
+    }
+    .gracias-B {
+        font-size: 1.5em;
+    }
+    /*------------------------Footer-----------------------*/
+    .logos {
+        width: 283px;
+        margin: auto;
+    }
+    .contacto {
+        margin-top: 3em;
+    }
+    .contacto li {
+        font-size: 1.3em;
+        margin-top: .2em;
+    }
+    #face, #twitter, #youtube, #insta {
+        padding-right: 50px;
+        padding-bottom: 33px;
+        text-decoration: none;
+    }
+    #face {
+        background-image: url("../Imagenes/icon/face_pc.png");
+    }
+    #twitter {
+        background-image: url("../Imagenes/icon/twitter_pc.png");
+        margin-left: 1em;
+    }
+    #youtube {
+        background-image: url("../Imagenes/icon/youtube_pc.png");
+        margin-left: 1em;
+    }
+    #insta {
+        background-image: url("../imagenes/icon/instagram_pc.png");
+        margin-left: 1em;
+    }
+    .cont-mapa {
+        text-align: center;   
+    }
+}
+@media screen and (min-width:1024px) {
+
+    .home {
+        padding: 0 5em;
+    }
+    /* ---------------Header-------------- */
+    h1 {
+        padding-left:70px;
+        font-size: 6em;
+        background-image: url("../imagenes/icon/Torre.png");
+        background-repeat: no-repeat;
+        background-position-y: -5px;
+        background-position-x: 10px;
+    }
+    /*---------------Lugares-------------*/
+    .cont-Lugares {
+        margin: 0%;
+        display: inline-block;
+        margin-left: .5em;
+        margin-bottom: 1em;
+        vertical-align: top;
+    }
+    .centrar-Lugares {
+        max-width: 1040px;
+        margin: auto;
+    }
+    .m-auto  {
+        margin-left: 25%;
+        display: inline-block;
+    }
+
+    .detalle-Lugares {
+        font-size: 1.2em;
+    }
+
+    /*---------------Resto---------------*/
+    .cont-Resto {
+        width: 1000px;
+        height: 266px;
+    }
+    .detalle-Resto {
+        width: 550px;
+        display: inline-block;
+    }
+    .cont-Resto h3 {
+        font-size: 2em;
+    }
+    .cont-Resto img {
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 20px;
+    }
+    /*---------------Formulario---------------*/
+    form {
+        max-width: 800px;
+    }
+    .form-mitad {
+            display: inline-block;
+            width: 45%;
+            vertical-align: top;
+    }
+    .from-derecha {
+            float: right;
+    }
+}
