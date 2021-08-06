@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+   <head>
+    	<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Mundo Paris</title>
+		<link rel="stylesheet" href="css/estilo.css"/>
+		<link rel="icon" href="imagenes/icon/Torre.png" type="image/png"/>
+   </head>
+	
+<body>
+	<header>
+		<h1>Mundo <span>Paris</span></h1>
+		<nav id="menu">	
+		  <ul id="hamburguesa">
+				<li id="abrir"><a href="#menu">abrir</a></li>
+				<li><a href="#">Cerrar</a></li>
+		  </ul>
+		  <ul id="barra">
+		  <li><a href="index.html">Home</a></li>
+		  <li><a href="lugares.html">Lugares</a></li>
+		  <li><a href="excursiones.html">Excursiones</a></li>
+		  <li><a href="restaurant.html">Restaurantes</a></li>
+		  </ul>
+		</nav>
+		<picture>
+		  <source srcset="imagenes/M_Ciudad.jpg"  media="(max-width:430px)" />
+		  <img src="imagenes/Ciudad.jpg" alt="ciudad de Paris" />
+		</picture>
+	  </header>
+<main>	
+<section>	
+	<h2>Para mas Informacion de Nuestas excurciones</h2>
+	<!-- http://recursos.grodriguez.com.ar/FORM/ -->
+		<form action="gracias.html" method="post" enctype="multipart/form-data">
+			
+			<label for="name">Nombre y Apellido</label>
+			<input type="text" name="nombre" id="name"/>
+			<div class="form-mitad">
+				<label  class="file-label" for="dni">Adjunta foto de DNI</label>
+				<input type="file" name="file1" id="dni">
+			</div>
+			
+
+			<div class="form-mitad from-derecha">
+				<label>Genero</label>
+				<select name="Genero">
+					<option value="">Femenino</option>
+					<option value="">Masculino</option>
+				</select>
+			</div>
+			
+			<label for="Correo">Correo Electronico</label>
+			<input type="text" name="correo" id="Correo"/>
+			
+			<label for="Telefono">Telefono:</label>
+			<input type="tel" name="telefono" id="Telefono"/>
+			
+			<div class="form-mitad">
+				<label for="fecha">Fecha </label>
+				<input type="date" name="fecha" id="fecha" min="2019-06-29" max="2021-06-29"/>
+			</div>
+			
+			<div class="form-mitad from-derecha">
+				<label>Excurciones</label>
+				<select name="excurcion">
+					<option value="TorreEiffel" >Entrada a la Torre Eiffel </option>
+					<option value="Bicicleta"> Paseo en Bicicleta por Versalles</option>
+					<option value="ParisUnDia">Paris en un dia</option>
+					<option value="Crucero">Crucero</option>
+				</select>
+			</div>
+			
+			<label for="Comentario">Tu Comentario</label>
+			<textarea name="comentario" id="Comentario"></textarea>
+			
+			<input type="submit" value="Enviar"  id="enviar" class="Enviar"/>
+					
+		</form>
+</section>
+</main>
+<footer>
+	<div class="redes">
+		<div class="logos">
+			<ul>
+				<li><a id="face" href="#"></a></li>
+				<li><a id="twitter" href="#"></a></li>
+				<li><a id="youtube" href="#"></a></li>
+				<li><a id="insta" href=""></a></li>
+			</ul>
+			<ul class="contacto">
+				<li><span>Telefono: </span>4545-6464</li>
+				<li>mundoparis@gmail.com</li>
+			</ul>
+		</div>
+		
+	</div>
+	
+	<div class="cont-mapa">
+		<iframe  id="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1312.1010135754175!2d2.33046238839933!3d48.87342511158187!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x779df88814d0945b!2sTOURISM%20INFORMATION%20POINT%20CRT!5e0!3m2!1ses!2sar!4v1592503957433!5m2!1ses!2sar" width="150" height="150" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+	</div>
+	<p>Copyright©EscuelaDavinci | FrancoKurachiUbé</p>
+</footer>
+</body>
+</html>
